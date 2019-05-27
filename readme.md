@@ -1,23 +1,36 @@
 # custom-element-to-React
 
-> Converts a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) to a React component,
-> with props and events.
+> Converts a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) to a React component, with props and events.
 
-## Usage
+## Installation
 
 ```
 npm install @nrk/custom-element-to-react
 ```
 
+## Usage
+
+Given a custom element:
+
+```js
+// my-element.js
+export default class MyElement extends HTMLElement { /* ... */ }
+```
+
+You can convert it to React component by passing in its class definition and a list of props and custom event names:
 ```js
 import React from 'react'
+import ReactDOM from 'react-dom'
 import customElementToReact from '@nrk/custom-element-to-react'
+import element from './my-element.js'
 
-class MyElement extends HTMLElement {
-  // ....
-}
+const MyElement = customElementToReact(element, {
+  props: ['prop1', 'prop2'],            // Prop names to register in React
+  customEvents: ['event1', 'event2'],   // Custom events names to register in React
+  suffix: '123'                         // Adds a suffix to inner custom element tag name before registering. Use to avoid version conflicts
+})
 
-const MyComponent = customElementToReact(myComponent)
+ReactDOM.render(<MyElement />, document.getElementById('div'))
 ```
 
 ## Local development
