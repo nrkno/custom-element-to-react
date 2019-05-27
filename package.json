@@ -1,7 +1,7 @@
 {
   "name": "@nrk/custom-element-to-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "Convert custom element React component",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "homepage": "https://github.com/nrkno/custom-element-to-react",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "publish:patch": "npm version patch -m 'Release patch %s'",
     "publish:minor": "npm version minor -m 'Release minor %s'",
     "publish:major": "npm version major -m 'Release major %s'",
-    "postversion": "npm run build && git push && git push --tags && npm publish",
+    "postversion": "npm run build && git push && git push --tags && npm publish --access public",
     "test": "npm run build && ava -v && standard -v",
     "test:watch": "jest --watch"
   },
