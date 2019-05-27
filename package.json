@@ -1,6 +1,6 @@
 {
   "name": "@nrk/custom-element-to-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert custom element React component",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "homepage": "https://github.com/nrkno/custom-element-to-react",
