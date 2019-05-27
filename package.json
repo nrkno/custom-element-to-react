@@ -1,0 +1,56 @@
+{
+  "name": "@nrk/custom-element-to-react",
+  "version": "0.0.1",
+  "description": "",
+  "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
+  "homepage": "https://github.com/nrkno/custom-element-to-react",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrkno/custom-element-to-react.git"
+  },
+  "main": "lib/custom-element-to-react.js",
+  "module": "lib/custom-element-to-react.mjs",
+  "files": [
+    "lib/custom-element-to-react*"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "publish:patch": "npm version patch -m 'Release patch %s'",
+    "publish:minor": "npm version minor -m 'Release minor %s'",
+    "publish:major": "npm version major -m 'Release major %s'",
+    "postversion": "npm run build && git push && git push --tags && npm publish",
+    "test": "npm run build && ava -v && standard -v",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "ava": "^1.4.1",
+    "esm": "^3.2.25",
+    "puppeteer": "^1.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "1.7.4",
+    "rollup-plugin-buble": "0.19.6",
+    "rollup-plugin-commonjs": "9.2.2",
+    "rollup-plugin-node-resolve": "4.0.1",
+    "rollup-plugin-replace": "2.1.1",
+    "rollup-plugin-serve": "1.0.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "standard": "12.0.1"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ],
+    "babel": {
+      "testOptions": {
+        "presets": [
+          "@babel/preset-react"
+        ]
+      }
+    }
+  }
+}
