@@ -1,7 +1,8 @@
 {
   "name": "@nrk/custom-element-to-react",
   "version": "1.0.1",
-  "description": "Convert custom element React component",
+  "description": "Convert custom element to React component",
+  "keywords": "custom element react component convert props events dom web components",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "homepage": "https://github.com/nrkno/custom-element-to-react",
   "license": "MIT",
