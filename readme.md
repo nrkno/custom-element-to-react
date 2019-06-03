@@ -33,6 +33,17 @@ const MyElement = customElementToReact(element, {
 ReactDOM.render(<MyElement />, document.getElementById('div'))
 ```
 
+## Server side
+
+If you're going to use this module to render a component in NodeJS, you should
+ mock `HTMLElement` globally in order to make `MyElement extends HTMLElement` valid:
+
+```js
+if (typeof window !== 'undefined' && !global.HTMLElement) {
+  global.HTMLElement = class {}
+}
+```
+
 ## Local development
 First clone `@nrk/custom-element-to-react` and install its dependencies:
 
