@@ -1,4 +1,4 @@
-# @nrk/custom-element-to-react
+# @nrk/custom-element-to-react [![Build Status](https://travis-ci.com/nrkno/custom-element-to-react.svg?branch=master)](https://travis-ci.com/nrkno/custom-element-to-react)
 
 > Converts a [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) to a React component, with props and events.
 
