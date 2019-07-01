@@ -9,12 +9,11 @@ const name = pkg.name.replace('@nrk/', '')
 const banner = `/*! @nrk/${name} v${pkg.version} - Copyright (c) 2019-${new Date().getFullYear()} NRK */`
 const globals = { react: 'React' }
 const external = Object.keys(globals)
-const isBuild = !process.env.ROLLUP_WATCH
 const plugins = [
   resolve(),
   commonjs(),
   buble(),
-  isBuild || serve('lib')
+  Boolean(process.env.ROLLUP_WATCH) && serve('lib')
 ]
 
 export default [{
