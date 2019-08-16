@@ -33,6 +33,16 @@ const MyElement = customElementToReact(element, {
 ReactDOM.render(<MyElement />, document.getElementById('div'))
 ```
 
+## forwardRef
+
+`forwardRef` provides access to the underlying CustomElement (DOM) itself instead of the React component.
+```
+<MyElement
+  ref={(comp) => console.log('MyElement React Component:', comp)}
+  forwardRef={(node) => console.log('MyElement actual DOM Element:', node)}
+/>
+```
+
 ## Server side
 
 If you're going to use this module to render a component in NodeJS, you should
