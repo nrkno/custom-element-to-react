@@ -36,7 +36,7 @@ ReactDOM.render(<MyElement />, document.getElementById('div'))
 ## forwardRef
 
 `forwardRef` provides access to the underlying CustomElement (DOM) itself instead of the React component.
-```
+```jsx
 <MyElement
   ref={(comp) => console.log('MyElement React Component:', comp)}
   forwardRef={(node) => console.log('MyElement actual DOM Element:', node)}
