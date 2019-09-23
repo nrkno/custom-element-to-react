@@ -38,7 +38,7 @@
     "@babel/core": "7.6.0",
     "@babel/preset-env": "7.6.0",
     "@babel/preset-react": "7.0.0",
-    "ava": "2.3.0",
+    "ava": "2.4.0",
     "esm": "3.2.25",
     "puppeteer": "1.20.0",
     "react": "16.9.0",
