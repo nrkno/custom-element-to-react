@@ -41,7 +41,7 @@
     "ava": "2.4.0",
     "esm": "3.2.25",
     "puppeteer": "2.0.0",
-    "react": "16.10.2",
+    "react": "16.11.0",
     "react-dom": "16.10.2",
     "rollup": "1.26.0",
     "rollup-plugin-buble": "0.19.8",
