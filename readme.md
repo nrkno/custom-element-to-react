@@ -27,6 +27,7 @@ import element from './my-element.js'
 const MyElement = customElementToReact(element, {
   props: ['prop1', 'prop2'],            // Optional. Prop names to register in React
   customEvents: ['event1', 'event2'],   // Optional. Custom events names to register in React
+  name: 'MyElementName',                // Optional. The name to be used for the inner custom element tag (CamelCase will be converted to kebab-case). Default: name property of element class definition
   suffix: '123'                         // Optional. Adds a suffix to inner custom element tag name before registering. Use to control tag name of custom element. Default: 'react'
 })
 
