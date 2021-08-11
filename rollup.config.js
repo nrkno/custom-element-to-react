@@ -19,7 +19,7 @@ const plugins = [
 export default [{
   input: 'lib/index.js',
   output: [
-    { format: 'cjs', file: `lib/${name}.js` },
+    { format: 'cjs', file: `lib/${name}.js`, exports: 'default' },
     { format: 'esm', file: `lib/${name}.mjs` }
   ],
   plugins,
