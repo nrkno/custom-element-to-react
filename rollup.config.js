@@ -1,7 +1,7 @@
 import buble from '@rollup/plugin-buble'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
-import { uglify } from 'rollup-plugin-uglify'
+import { terser } from 'rollup-plugin-terser'
 import serve from 'rollup-plugin-serve'
 import pkg from './package.json'
 
@@ -27,6 +27,6 @@ export default [{
 }, {
   input: 'lib/index.js',
   output: { format: 'iife', file: `lib/${name}.min.js`, name: 'customElementToReact', banner, globals },
-  plugins: plugins.concat(uglify({ output: { comments: /^!/ } })),
+  plugins: plugins.concat(terser({ format: { comments: /^!/ } })),
   external
 }]
