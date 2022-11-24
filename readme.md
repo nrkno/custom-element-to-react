@@ -54,7 +54,9 @@ if (typeof window !== 'undefined' && !global.HTMLElement) {
 }
 ```
 
-## Local development
+## Development
+
+### Local development
 First clone `@nrk/custom-element-to-react` and install its dependencies:
 
 ```bash
@@ -64,15 +66,25 @@ npm install # Installs dependencies for all packages
 npm start # Your browser will open documentation with hot reloading
 ```
 
-## Building and committing
+### nvm
+
+Uses [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md#intro) (nvm) to organize node version
+
+nvm config is saved in `.nvmrc`, set appropriate node version using:
+
+```
+nvm use
+```
+
+### Building and committing
 After having applied changes, remember to build before pushing the changes upstream.
 
 ```bash
 git checkout -b feature/my-changes
 # update the source code
-npm run build # Builds all the packages
-git commit -am "Add my changes"
-git push origin feature/my-changes
-# then make a PR to the master branch,
-# and assign another developer to review your code
+npm run build
+git commit -am "<prefix>: Add my changes"
+git push --set-upstream origin feature/my-changes
+# then make PR to the master branch,
+# and assign a developer to review your code
 ```

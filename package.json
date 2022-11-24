@@ -22,6 +22,7 @@
   },
   "main": "lib/custom-element-to-react.js",
   "module": "lib/custom-element-to-react.mjs",
+  "type": "module",
   "files": [
     "lib/custom-element-to-react*"
   ],
@@ -32,36 +33,20 @@
     "publish:major": "npm version major -m 'Release major %s'",
     "postversion": "npm run build && git push && git push --tags && npm publish --access public",
     "test": "npm run build && ava -v && standard -v",
-    "test:watch": "jest --watch",
+    "test:watch": "ava --watch",
     "lint": "standard -v"
   },
   "devDependencies": {
-    "@ava/babel": "2.0.0",
-    "@babel/preset-env": "7.15.6",
-    "@babel/preset-react": "7.14.5",
-    "@rollup/plugin-buble": "0.21.3",
-    "@rollup/plugin-commonjs": "20.0.0",
-    "@rollup/plugin-node-resolve": "13.0.5",
-    "ava": "3.15.0",
-    "esm": "3.2.25",
-    "puppeteer": "13.5.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "rollup": "2.57.0",
-    "rollup-plugin-serve": "1.1.0",
+    "@babel/preset-env": "7.20.2",
+    "@babel/preset-react": "7.18.6",
+    "@rollup/plugin-babel": "6.0.2",
+    "ava": "5.1.0",
+    "puppeteer": "19.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rollup": "2.78.0",
+    "rollup-plugin-serve": "2.0.1",
     "rollup-plugin-terser": "7.0.2",
-    "standard": "16.0.3"
-  },
-  "ava": {
-    "require": [
-      "esm"
-    ],
-    "babel": {
-      "testOptions": {
-        "presets": [
-          "@babel/preset-react"
-        ]
-      }
-    }
+    "standard": "17.0.0"
   }
 }
