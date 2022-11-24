@@ -1,6 +1,4 @@
 import babel from '@rollup/plugin-babel'
-import commonjs from '@rollup/plugin-commonjs'
-import resolve from '@rollup/plugin-node-resolve'
 import serve from 'rollup-plugin-serve'
 import { terser } from 'rollup-plugin-terser'
 import packageInfo from './package.json'
@@ -11,8 +9,6 @@ const banner = `/*! ${name} v${version} - Copyright (c) 2019-${new Date().getFul
 const globals = { react: 'React' }
 const external = Object.keys(globals)
 const plugins = [
-  resolve(),
-  commonjs(),
   babel({ presets: [['@babel/preset-env', { modules: false }]], babelHelpers: 'bundled' }),
   Boolean(process.env.ROLLUP_WATCH) && serve('lib')
 ]
